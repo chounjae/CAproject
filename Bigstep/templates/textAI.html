@@ -110,5 +110,42 @@
             <p>변환 결과가 여기에 표시됩니다.</p>
         </div>
     </div>
+
+    <script>
+        document.querySelector('#convert-button').addEventListener('click', async () => {
+            const userText = document.querySelector('#user-text').value;
+            const resultBox = document.querySelector('.result-box');
+            const resultText = document.querySelector('#result-text');
+
+            if (!userText.trim()) {
+                alert("문장을 입력해주세요!");
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/beautify/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ text: userText })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    resultBox.style.display = 'block';
+                    resultText.innerText = data.text;
+                } else {
+                    resultBox.style.display = 'block';
+                    resultText.innerText = `오류: ${data.error}`;
+                }
+            } catch (error) {
+                resultBox.style.display = 'block';
+                resultText.innerText = '서버와 연결할 수 없습니다. 다시 시도해주세요.';
+            }
+        });
+    </script>
+
 </body>
 </html>
