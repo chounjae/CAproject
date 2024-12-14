@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 말투 변환기</title>
+    <style>
+        /* 전체 레이아웃 */
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #B525F3, #ffc0cb);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* 컨테이너 */
+        .container {
+            background: #fff;
+            width: 90%;
+            max-width: 600px;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* 제목 */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        p {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        /* 텍스트 입력 박스 */
+        textarea {
+            width: 100%;
+            height: 120px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            resize: none;
+            outline: none;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
+        }
+
+        /* 버튼 */
+        button {
+            background: linear-gradient(135deg, #8e44ad, #3498db);
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 결과 박스 */
+        .result-box {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* 애니메이션 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>우아한 공쥬님 말투</h1>
+        <p>공쥬님 말투를 써보아요✨✨✨</p>
+        <textarea placeholder="여기에 변환하고 싶은 문장을 입력하세요..."></textarea>
+        <button>예쁘게 변환하기 💖</button>
+        <div class="result-box">
+            <p>변환 결과가 여기에 표시됩니다.</p>
+        </div>
+    </div>
+</body>
+</html>

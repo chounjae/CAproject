@@ -1,6 +1,6 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
-
-def start(request):
-    return HttpResponse("안녕")
+def home(request):
+    return render(request, 'textAI.html')

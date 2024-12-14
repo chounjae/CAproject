@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView  # 템플릿 렌더링용 뷰
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name="textAI.html")),  # 루트 URL 연결
     path('useapi/', include('Useapi.urls')),
     path('imageai/', include('ImageAI.urls')),
     path('textai/', include('TextAI.urls')),
