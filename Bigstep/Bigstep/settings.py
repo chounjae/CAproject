@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ImageAI',  # ImageAI 앱 추가
+    'TextAI',   # TextAI 앱 추가
     'Useapi',
     'django.contrib.admin',
     'django.contrib.auth',
