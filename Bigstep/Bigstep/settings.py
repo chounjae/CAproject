@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
     'ImageAI',  # ImageAI 앱 추가
     'TextAI',   # TextAI 앱 추가
     'Useapi',
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'Bigstep.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 
+from django.shortcuts import render
 
+def home(request):
+    return render(request, 'imageai.html')
 
-def start(request):
-    return HttpResponse("안녕")
