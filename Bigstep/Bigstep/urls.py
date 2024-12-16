@@ -16,12 +16,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+<<<<<<< HEAD
 from . import views
 from django.conf.urls.static import static
 from . import settings
+=======
+from django.views.generic import TemplateView  # 템플릿 렌더링용 뷰
+from . import views
+from django.conf.urls.static import static
+from . import settings
+
+
+>>>>>>> whyrono/an
 urlpatterns = [
     path('', views.index),
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name="textAI.html")),  # 루트 URL 연결
     path('useapi/', include('Useapi.urls')),
     path('imageai/', include('ImageAI.urls')),
     path('textai/', include('TextAI.urls')),
