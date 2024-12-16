@@ -1,8 +1,7 @@
-from django.contrib import admin
-from django.urls import path, include
-from . import views
-
+from django.urls import path
+from .views import upload_image, upload_success
 
 urlpatterns = [
-    path('', views.home),
+    path('', upload_image, name='upload-image'),
+    path('upload-success/', upload_success, name='upload-success'),
 ]

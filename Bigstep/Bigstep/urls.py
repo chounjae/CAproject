@@ -16,11 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from . import views
+from django.conf.urls.static import static
+from . import settings
 urlpatterns = [
+    path('', views.index),
     path('admin/', admin.site.urls),
     path('useapi/', include('Useapi.urls')),
     path('imageai/', include('ImageAI.urls')),
     path('textai/', include('TextAI.urls')),
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
