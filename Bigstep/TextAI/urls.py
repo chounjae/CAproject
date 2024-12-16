@@ -5,6 +5,8 @@ from . import views
 
 urlpatterns = [
     path('', views.home), 
-    
+    path('api/beautify/', views.beautify_text, name='beautify_text'),
     
 ]
+
+#뷰 파일에서 api 호출 

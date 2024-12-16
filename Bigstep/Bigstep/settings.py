@@ -127,5 +127,3 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-from decouple import config
-OPENAI_API_KEY = config('OPENAI_API_KEY')

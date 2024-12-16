@@ -12,7 +12,7 @@ def home(request):
 
 
 # OpenAI API 키 설정
-openai.api_key = settings.OPENAI_API_KEY
+openai.api_key = config('~~~~~~~')
 
 @csrf_exempt
 def beautify_text(request):
@@ -28,7 +28,7 @@ def beautify_text(request):
             # OpenAI API 호출
             response = openai.Completion.create(
                 engine="text-davinci-003",
-                prompt = prompt
+                prompt = prompt,
                 max_tokens=100,
                 temperature=0.7
             )
