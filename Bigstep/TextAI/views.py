@@ -13,7 +13,7 @@ def home(request):
 
 
 # OpenAI API 키 설정
-openai.api_key = config('~~~~~~~')
+openai.api_key = config('OPENAI_API_KEY')
 
 @csrf_exempt
 def beautify_text(request):
