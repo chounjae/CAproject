@@ -102,14 +102,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>우아한 공쥬님 말투</h1>
-        <p>공쥬님 말투를 써보아요✨✨✨</p>
-        <textarea id = "user-text"placeholder="여기에 변환하고 싶은 문장을 입력하세요..."></textarea>
-        <button id = "convert-button">예쁘게 변환하기 💖</button>
-        <div class="result-box">
-            <p>변환 결과가 여기에 표시됩니다.</p>
+        <h1>우아한 공쥬님 말투 변환기💖</h1>
+        <p>공쥬님이 되어 보아요</p>
+        <textarea id = "user-text"placeholder="여기에 입력하세요..."></textarea>
+        <button id = "convert-button">✨✨공쥬가 되는 버튼!✨✨</button>
+        <div class="result-box" style = "display : none;">
+            <p id="result-text">변환 결과가 여기에 표시됩니다.</p>
         </div>
     </div>
+
+
+
+
+
 
     <script>
         document.querySelector('#convert-button').addEventListener('click', async () => {
@@ -123,7 +128,7 @@
             }
 
             try {
-                const response = await fetch('/api/beautify/', {
+                const response = await fetch('/textai/api/beautify/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

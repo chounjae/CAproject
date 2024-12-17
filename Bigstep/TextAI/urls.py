@@ -4,7 +4,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.home), 
+    path('', views.home, name='home'),
     path('api/beautify/', views.beautify_text, name='beautify_text'),
     
 ]
