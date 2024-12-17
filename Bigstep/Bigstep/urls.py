@@ -26,5 +26,4 @@ urlpatterns = [
     path('useapi/', include('Useapi.urls')),
     path('imageai/', include('ImageAI.urls')),
     path('textai/', include('TextAI.urls')),
-    path('textai/' , include('TextAI.urls')),
 ]

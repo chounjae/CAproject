@@ -4,9 +4,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('api/beautify/', views.beautify_text, name='beautify_text'),
+    path('', views.home, name='home'),  # 기본 화면
+    path('api/beautify/', views.beautify_text, name='beautify_text'),  # 여기가 API 엔드포인트
     
 ]
-
-#뷰 파일에서 api 호출 
