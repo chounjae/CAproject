@@ -1,7 +1,6 @@
 from django.urls import path
-from .views import upload_image, upload_success
+from .views import analyze_image
 
 urlpatterns = [
-    path('', upload_image, name='upload-image'),
-    path('upload-success/', upload_success, name='upload-success'),
+    path('', analyze_image, name='analyze_image'),
 ]

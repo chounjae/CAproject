@@ -43,6 +43,13 @@ h1 {
   font-weight: 600;
 }
 
+h2 {
+  text-align: center; /* 중앙 정렬 */
+  font-size: 22px;
+  color: #ffffff;
+  margin-top: 50px;
+  font-weight: 600;
+}
 form {
   width: 50%;
   margin: 40px auto;
@@ -145,4 +152,11 @@ form button:active {
 .upload-success a:active {
   background-color: #1d4ed8;
   transform: scale(0.98);
+}
+.card {
+  height: 100px;
+  width: 100px;
+  border: 2px solid gray;
+  text-align: center;
+  background-color: crimson;
 }

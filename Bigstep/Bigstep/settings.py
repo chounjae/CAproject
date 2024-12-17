@@ -19,9 +19,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
+
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.path.join(BASE_DIR, 'bigstep-445005-60e7803e6557.json')
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-h#*qni$dw4^j491p+wk+b_jdjbl5pbhyi1$!jix9@=vtivy#9*'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

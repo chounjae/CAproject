@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {%load static%}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FUCK.GG</title>
+    <link rel="stylesheet" href="{% static 'style/css/style.css' %}" />
+  </head>
+  <body>
+    <h1>AI를 통해 분석하는 게임평가</h1>
+    <h2>최근 3년 이내 롤드컵 경기 분석결과 87% 확률로 mvp 예측성공</h2>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="image" accept="image/*" required />
+      <button type="submit">분석하기</button>
+    </form>
+  </body>
+</html>
